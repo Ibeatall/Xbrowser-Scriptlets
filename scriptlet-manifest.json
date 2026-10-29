@@ -1,0 +1,429 @@
+{
+ "format": 1,
+ "scriptlets": {
+  "abort-current-script.js": {
+   "trusted": false
+  },
+  "set-attr.js": {
+   "trusted": false
+  },
+  "trusted-set-attr.js": {
+   "trusted": true
+  },
+  "remove-attr.js": {
+   "trusted": false
+  },
+  "trusted-create-html.js": {
+   "trusted": true
+  },
+  "href-sanitizer.js": {
+   "trusted": false
+  },
+  "proxy-apply-config.js": {
+   "trusted": false
+  },
+  "edit-outbound-object.js": {
+   "trusted": false
+  },
+  "trusted-edit-outbound-object.js": {
+   "trusted": true
+  },
+  "json-edit.js": {
+   "trusted": false
+  },
+  "trusted-json-edit.js": {
+   "trusted": true
+  },
+  "edit-inbound-object.js": {
+   "trusted": false
+  },
+  "trusted-edit-inbound-object.js": {
+   "trusted": true
+  },
+  "edit-this-object.js": {
+   "trusted": false
+  },
+  "trusted-edit-this-object.js": {
+   "trusted": true
+  },
+  "edit-object-on-getter.js": {
+   "trusted": false
+  },
+  "trusted-edit-object-on-getter.js": {
+   "trusted": true
+  },
+  "edit-object-on-setter.js": {
+   "trusted": false
+  },
+  "trusted-edit-object-on-setter.js": {
+   "trusted": true
+  },
+  "edit-element-object.js": {
+   "trusted": false
+  },
+  "trusted-edit-element-object.js": {
+   "trusted": true
+  },
+  "json-edit-xhr-response.js": {
+   "trusted": false
+  },
+  "trusted-json-edit-xhr-response.js": {
+   "trusted": true
+  },
+  "json-edit-xhr-request.js": {
+   "trusted": false
+  },
+  "trusted-json-edit-xhr-request.js": {
+   "trusted": true
+  },
+  "json-edit-fetch-response.js": {
+   "trusted": false
+  },
+  "trusted-json-edit-fetch-response.js": {
+   "trusted": true
+  },
+  "trusted-edit-inbound-element.js": {
+   "trusted": true
+  },
+  "json-edit-fetch-request.js": {
+   "trusted": false
+  },
+  "trusted-json-edit-fetch-request.js": {
+   "trusted": true
+  },
+  "jsonl-edit-xhr-response.js": {
+   "trusted": false
+  },
+  "trusted-jsonl-edit-xhr-response.js": {
+   "trusted": true
+  },
+  "jsonl-edit-fetch-response.js": {
+   "trusted": false
+  },
+  "trusted-jsonl-edit-fetch-response.js": {
+   "trusted": true
+  },
+  "abort-on-stack-trace.js": {
+   "trusted": false
+  },
+  "trusted-prune-inbound-object.js": {
+   "trusted": true
+  },
+  "trusted-prune-outbound-object.js": {
+   "trusted": true
+  },
+  "json-prune.js": {
+   "trusted": false
+  },
+  "json-prune-fetch-response.js": {
+   "trusted": false
+  },
+  "json-prune-xhr-response.js": {
+   "trusted": false
+  },
+  "evaldata-prune.js": {
+   "trusted": false
+  },
+  "noeval-if.js": {
+   "trusted": false
+  },
+  "prevent-addEventListener.js": {
+   "trusted": false
+  },
+  "prevent-bab.js": {
+   "trusted": false
+  },
+  "prevent-clipboard-write.js": {
+   "trusted": true
+  },
+  "prevent-dialog.js": {
+   "trusted": false
+  },
+  "prevent-fetch.js": {
+   "trusted": false
+  },
+  "trusted-prevent-fetch.js": {
+   "trusted": true
+  },
+  "freeze-element-property.js": {
+   "trusted": false
+  },
+  "prevent-innerHTML.js": {
+   "trusted": false
+  },
+  "prevent-navigation.js": {
+   "trusted": false
+  },
+  "prevent-setTimeout.js": {
+   "trusted": false
+  },
+  "prevent-setInterval.js": {
+   "trusted": false
+  },
+  "prevent-requestAnimationFrame.js": {
+   "trusted": false
+  },
+  "set-constant.js": {
+   "trusted": false
+  },
+  "trusted-set-constant.js": {
+   "trusted": true
+  },
+  "trusted-replace-argument.js": {
+   "trusted": true
+  },
+  "spoof-css.js": {
+   "trusted": false
+  },
+  "prevent-xhr.js": {
+   "trusted": false
+  },
+  "trusted-prevent-xhr.js": {
+   "trusted": false
+  },
+  "mpegdash-prune.js": {
+   "trusted": false
+  },
+  "set-cookie.js": {
+   "trusted": false
+  },
+  "set-cookie-reload.js": {
+   "trusted": false
+  },
+  "trusted-set-cookie.js": {
+   "trusted": true
+  },
+  "trusted-set-cookie-reload.js": {
+   "trusted": true
+  },
+  "remove-cookie.js": {
+   "trusted": false
+  },
+  "set-local-storage-item.js": {
+   "trusted": false
+  },
+  "set-session-storage-item.js": {
+   "trusted": false
+  },
+  "trusted-set-local-storage-item.js": {
+   "trusted": true
+  },
+  "trusted-set-session-storage-item.js": {
+   "trusted": true
+  },
+  "abort-on-property-read.js": {
+   "trusted": false
+  },
+  "abort-on-property-write.js": {
+   "trusted": false
+  },
+  "adjust-setInterval.js": {
+   "trusted": false
+  },
+  "adjust-setTimeout.js": {
+   "trusted": false
+  },
+  "prevent-refresh.js": {
+   "trusted": false
+  },
+  "remove-class.js": {
+   "trusted": false
+  },
+  "webrtc-if.js": {
+   "trusted": false
+  },
+  "prevent-window-open.js": {
+   "trusted": false
+  },
+  "close-window.js": {
+   "trusted": false
+  },
+  "window.name-defuser.js": {
+   "trusted": false
+  },
+  "overlay-buster.js": {
+   "trusted": false
+  },
+  "alert-buster.js": {
+   "trusted": false
+  },
+  "nowebrtc.js": {
+   "trusted": false
+  },
+  "disable-newtab-links.js": {
+   "trusted": false
+  },
+  "xml-prune.js": {
+   "trusted": false
+  },
+  "m3u-prune.js": {
+   "trusted": false
+  },
+  "call-nothrow.js": {
+   "trusted": false
+  },
+  "remove-node-text.js": {
+   "trusted": false
+  },
+  "prevent-canvas.js": {
+   "trusted": false
+  },
+  "multiup.js": {
+   "trusted": false
+  },
+  "break-on-call.js": {
+   "trusted": false
+  },
+  "trusted-replace-node-text.js": {
+   "trusted": true
+  },
+  "trusted-replace-fetch-response.js": {
+   "trusted": true
+  },
+  "trusted-replace-xhr-response.js": {
+   "trusted": true
+  },
+  "trusted-click-element.js": {
+   "trusted": true
+  },
+  "trusted-replace-outbound-text.js": {
+   "trusted": true
+  },
+  "trusted-suppress-native-method.js": {
+   "trusted": true
+  },
+  "trusted-prevent-dom-bypass.js": {
+   "trusted": true
+  },
+  "trusted-override-element-method.js": {
+   "trusted": true
+  },
+  "amazon_ads.js": {
+   "trusted": false
+  },
+  "adthrive_abd.js": {
+   "trusted": false
+  },
+  "doubleclick_instream_ad_status.js": {
+   "trusted": false
+  },
+  "fingerprint2.js": {
+   "trusted": false
+  },
+  "fingerprint3.js": {
+   "trusted": false
+  },
+  "freestar_pubfig.js": {
+   "trusted": false
+  },
+  "google-analytics_analytics.js": {
+   "trusted": false
+  },
+  "google-analytics_ga.js": {
+   "trusted": false
+  },
+  "google-ima.js": {
+   "trusted": false
+  },
+  "google-ima-dai.js": {
+   "trusted": true
+  },
+  "googlesyndication_adsbygoogle.js": {
+   "trusted": false
+  },
+  "googletagservices_gpt.js": {
+   "trusted": false
+  },
+  "nitropay_ads.js": {
+   "trusted": false
+  },
+  "nobab2.js": {
+   "trusted": false
+  },
+  "noeval.js": {
+   "trusted": false
+  },
+  "noeval-silent.js": {
+   "trusted": false
+  },
+  "nofab.js": {
+   "trusted": false
+  },
+  "noop.js": {
+   "trusted": false
+  },
+  "popads.js": {
+   "trusted": false
+  },
+  "popads-dummy.js": {
+   "trusted": false
+  },
+  "prebid-ads.js": {
+   "trusted": false
+  },
+  "sensors-analytics.js": {
+   "trusted": false
+  }
+ },
+ "aliases": {
+  "abort-current-inline-script.js": "abort-current-script.js",
+  "acis.js": "abort-current-script.js",
+  "acs.js": "abort-current-script.js",
+  "ra.js": "remove-attr.js",
+  "urlskip.js": "href-sanitizer.js",
+  "aost.js": "abort-on-stack-trace.js",
+  "prevent-eval-if.js": "noeval-if.js",
+  "addEventListener-defuser.js": "prevent-addEventListener.js",
+  "aeld.js": "prevent-addEventListener.js",
+  "bab-defuser.js": "prevent-bab.js",
+  "nobab.js": "prevent-bab.js",
+  "no-fetch-if.js": "prevent-fetch.js",
+  "no-setTimeout-if.js": "prevent-setTimeout.js",
+  "nostif.js": "prevent-setTimeout.js",
+  "setTimeout-defuser.js": "prevent-setTimeout.js",
+  "no-setInterval-if.js": "prevent-setInterval.js",
+  "nosiif.js": "prevent-setInterval.js",
+  "setInterval-defuser.js": "prevent-setInterval.js",
+  "no-requestAnimationFrame-if.js": "prevent-requestAnimationFrame.js",
+  "norafif.js": "prevent-requestAnimationFrame.js",
+  "set.js": "set-constant.js",
+  "trusted-set.js": "trusted-set-constant.js",
+  "no-xhr-if.js": "prevent-xhr.js",
+  "cookie-remover.js": "remove-cookie.js",
+  "aopr.js": "abort-on-property-read.js",
+  "aopw.js": "abort-on-property-write.js",
+  "nano-setInterval-booster.js": "adjust-setInterval.js",
+  "nano-sib.js": "adjust-setInterval.js",
+  "nano-setTimeout-booster.js": "adjust-setTimeout.js",
+  "nano-stb.js": "adjust-setTimeout.js",
+  "refresh-defuser.js": "prevent-refresh.js",
+  "rc.js": "remove-class.js",
+  "nowoif.js": "prevent-window-open.js",
+  "no-window-open-if.js": "prevent-window-open.js",
+  "window.open-defuser.js": "prevent-window-open.js",
+  "window-close-if.js": "close-window.js",
+  "rmnt.js": "remove-node-text.js",
+  "trusted-rpnt.js": "trusted-replace-node-text.js",
+  "replace-node-text.js": "trusted-replace-node-text.js",
+  "rpnt.js": "trusted-replace-node-text.js",
+  "trusted-rpfr.js": "trusted-replace-fetch-response.js",
+  "amazon-adsystem.com/aax2/amzn_ads.js": "amazon_ads.js",
+  "doubleclick.net/instream/ad_status.js": "doubleclick_instream_ad_status.js",
+  "google-analytics.com/analytics.js": "google-analytics_analytics.js",
+  "googletagmanager_gtm.js": "google-analytics_analytics.js",
+  "googletagmanager.com/gtm.js": "google-analytics_analytics.js",
+  "google-analytics.com/ga.js": "google-analytics_ga.js",
+  "google-ima3": "google-ima.js",
+  "google-ima3-dai": "google-ima-dai.js",
+  "googlesyndication.com/adsbygoogle.js": "googlesyndication_adsbygoogle.js",
+  "googlesyndication-adsbygoogle": "googlesyndication_adsbygoogle.js",
+  "googletagservices.com/gpt.js": "googletagservices_gpt.js",
+  "googletagservices-gpt": "googletagservices_gpt.js",
+  "silent-noeval.js": "noeval-silent.js",
+  "fuckadblock.js-3.2.0": "nofab.js",
+  "noopjs": "noop.js",
+  "abp-resource:blank-js": "noop.js",
+  "popads.net.js": "popads.js",
+  "prevent-popads-net.js": "popads.js"
+ }
+}

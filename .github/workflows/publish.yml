@@ -1,0 +1,62 @@
+# Regenerates the scriptlet definitions from the live filter lists, signs the
+# index and publishes everything to the rolling "scriptlet-defs" release.
+name: Publish scriptlet definitions
+
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scriptlet-definitions
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check idna==3.11 cryptography==46.0.5
+
+      # Never publish if the generator disagrees with uBlock Origin's parser.
+      - name: Self-test
+        run: |
+          for id in ublock-fixture fixture; do
+            python scriptlet_defs.py compile --input tests/fixture.txt --list "$id" --manifest scriptlet-manifest.json > "/tmp/$id.json"
+            cmp "/tmp/$id.json" "tests/$id.expected.json"
+          done
+
+      - name: Generate definitions
+        run: python scriptlet_defs.py generate --catalog catalog.json --manifest scriptlet-manifest.json --out out
+
+      - name: Sign index
+        env:
+          SCRIPTLET_SIGNING_KEY: ${{ secrets.SCRIPTLET_SIGNING_KEY }}
+        run: |
+          if [ -z "$SCRIPTLET_SIGNING_KEY" ]; then
+            echo "::error::Add the SCRIPTLET_SIGNING_KEY repository secret."
+            exit 1
+          fi
+          python scriptlet_defs.py sign --index out/index.json --key-env SCRIPTLET_SIGNING_KEY
+
+      # Lists first, then the signed index: an app that reads the new index
+      # always finds matching list files (until then it keeps the old ones).
+      - name: Publish release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view scriptlet-defs >/dev/null 2>&1 || gh release create scriptlet-defs \
+            --title "Scriptlet definitions" --latest=false \
+            --notes "Data-only scriptlet definitions for XBrowser, regenerated automatically. No code."
+          find out -name '*.json' ! -name index.json -print0 | xargs -0 gh release upload scriptlet-defs --clobber
+          gh release upload scriptlet-defs out/index.json out/index.json.sig --clobber
